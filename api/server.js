@@ -8,7 +8,12 @@ const app = express();
 
 //Middlewares
 app.use(express.json()); 
-app.use(cors()); 
+app.use(cors());
+
+const connectionString = process.env.MONGO_URI; 
+mongoose.connect(connectionString)
+        .then(() => console.log('Connected to the database…')) 
+        .catch((err) => console.error('Connection error:', err));
 
 const port = 4001; 
 
