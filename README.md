@@ -7,6 +7,9 @@ Samantha Cruz
 ## Inspiration
 A simple To Do list for casual users that need help keeping their tasks organized.
 
+# Structure
+The backend was created with Node while the frontend was created with React.
+
 ## Deployment
 This project was deployed using Vercel.
 https://mp-2-to-do-app.vercel.app/
