@@ -1,0 +1,13 @@
+@use "partials";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: partials.$font-family;
+}
+
+body {
+  background-color: partials.$light-alt;
+  color: partials.$light;
+}

@@ -1,0 +1,38 @@
+.todo {
+    padding: rem-calc(10);
+    border-radius: $border-radius;
+    background-color: $dark;
+    margin-top: $margin-top;
+    display: grid;
+    grid-template-columns: 3fr 0.3fr;
+    transition: $transition-time;
+    cursor: pointer;
+  
+    &:hover {
+      background-color: darken-color($dark, 10%);
+    }
+  
+    .checkbox {
+      width: $checkbox-size;
+      height: $checkbox-size;
+      border-radius: 50%;
+      background-color: $light;
+      transition: 0.4s;
+  
+      &.check-complete {
+        background-color: $primary;
+      }
+    }
+  
+    .text {
+      margin-left: $text-margin-left;
+  
+      &.check-complete {
+        text-decoration: line-through;
+      }
+    }
+  
+    .delete-todo {
+      @include flex-center;
+    }
+  }

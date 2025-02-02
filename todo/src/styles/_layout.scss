@@ -1,0 +1,15 @@
+@use "partials";
+
+.container {
+  max-width: partials.$max-width;
+  padding: partials.$padding;
+  margin: 0 auto;
+}
+
+.form {
+  margin-top: partials.$margin-top;
+  
+  button {
+    @include partials.mixins.button-styles;
+  }
+}
