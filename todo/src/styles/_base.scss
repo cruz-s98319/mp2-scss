@@ -1,13 +1,13 @@
-@use "partials";
+@use "variables";
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: partials.$font-family;
+  font-family: variables.$font-family;
 }
 
 body {
-  background-color: partials.$light-alt;
-  color: partials.$light;
+  background-color: variables.$background-color;
+  color: variables.$text-color;
 }

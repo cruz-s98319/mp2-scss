@@ -1,5 +1,29 @@
+@use "variables";
+
 @mixin flex-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin button-style($bg-color: variables.$primary-color) {
+  @if (type-of($bg-color) != 'color') {
+    @error "$bg-color must be a valid color. Received: #{$bg-color}";
   }
+
+  background-color: $bg-color;
+  color: variables.$background-color;
+  padding: variables.$button-padding;
+  border: none;
+  cursor: pointer;
+  border-radius: variables.$border-radius;
+  transition: background-color variables.$transition-time;
+
+  &:hover {
+    background-color: darken($bg-color, 10%);
+  }
+}
+
+@mixin box-shadow($color, $blur) {
+  box-shadow: 0 4px $blur $color;
+}

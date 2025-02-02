@@ -1,15 +1,31 @@
-@use "partials";
+@use "variables";
+@use "mixins";
 
 .container {
-  max-width: partials.$max-width;
-  padding: partials.$padding;
+  max-width: variables.$max-width;
+  padding: variables.$padding;
   margin: 0 auto;
-}
 
-.form {
-  margin-top: partials.$margin-top;
-  
-  button {
-    @include partials.mixins.button-styles;
+  .heading {
+    text-align: center;
+
+    h1 {
+      color: variables.$primary-color;
+    }
+  }
+
+  .form {
+    margin-top: variables.$margin-top;
+    display: flex;
+    justify-content: space-between;
+
+    input {
+      width: variables.$input-width;
+      padding: variables.$button-padding;
+    }
+
+    button {
+      @include mixins.button-style(variables.$secondary-color);
+    }
   }
 }

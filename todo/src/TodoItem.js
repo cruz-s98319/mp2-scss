@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 
 const API_BASE= 'http://localhost:4001/todo';
 

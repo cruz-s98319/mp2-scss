@@ -1,7 +1,7 @@
 @function rem-calc($size) {
-    @return #{$size / 16}rem;
-  }
-  
-  @function darken-color($color, $amount) {
-    @return darken($color, $amount);
-  }
+  @return #{$size / 16}rem;
+}
+
+@function adjust-opacity($color, $opacity) {
+  @return rgba($color, $opacity);
+}
